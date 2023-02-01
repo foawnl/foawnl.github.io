@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    font-family: 'NanumSquareNeo-Variable';
+    background: url("/img/main.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 85vh; 
+    padding-top: 50px;
+    position: relative;
+}
+main {}
+footer {}
+
+.container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* top */
+
+
+/* header */
+h2 {
+    font-family: 'HSBombaram';
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    font-size: 90px;
+    color: #ffd310;
+    width: 100%;
+    margin: auto;
+}
+.nav {
+    width: 100%;
+    height: 60px;
+    background-color: #eaf5d1;
+    border-radius: 50px;
+    border: 2px solid #243c30;
+}
+.logo {
+
+}
+.logo span {
+    width: 95px;
+    height: 35px;
+    background-color: #f1f1f1;
+}
+.menu {
+    font-weight: 900;
+}
+.menu ul {
+    float: right;
+}
+.menu ul li {
+    display: inline-block;
+    margin: 11px 74px 11px 91px;
+    line-height: 8px;
+}
+.menu ul li a {
+    color: #243c30;
+    font-size: 15px;
+}
+.effect_header {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #243c38;
+}
+.effect_header p {
+    font-size: 28px;
+    color: #ffff;
+    font-weight: 700;
+}
+
+/* main */
+/* part1 */
+.part1 {
+    background-color: #eaf5d1;
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    position: relative;
+    overflow: hidden;
+}
+.frame {
+    /* background: #ffff; */
+    width: 100%;
+    height: 100px;
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+.wave {
+    position: absolute;
+    top: 0;
+    display: flex;
+    animation: move linear infinite;
+
+}
+
+.circle {
+    display: inline-block;
+    width: 100px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    top: 165px;
+}
+
+.wave-back {
+    background: #ffff;
+    height: 200px;
+    animation-duration: 4s;
+    animation-play-state: running;
+}
+
+.wave-back .circle:nth-of-type(even) {
+    background: #ffff;
+}
+
+.wave-back .circle:nth-of-type(odd) {
+    background: #ffff;
+}
+
+
+@keyframes move {
+    0% {transform: translate(-500px);}
+    /* 50% {transform: translate(50px);} */
+    100% {transform: translate(2px);}
+}
