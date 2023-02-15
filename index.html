@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="top">
-        
+
     </div>
     <header>
         <div class="container">
@@ -34,47 +34,37 @@
         </div>
         <h2>THANK YOU FOR VISITING </h2>
         <div class="effect_header">
-            <p>
-                <!-- marquee : 전광판같은 속성 -->
-                <marquee behavior="scroll" scrollamout="10">WEB PUBLISHER . WEB PUBLISHER . WEB PUBLISHER . WEB PUBLISHER . WEB PUBLISHER</marquee> 
-            </p>
+            <p class="marquee">WEB PUBLISHER .</p>
         </div>
     </header>
     <!-- //header -->
 
     <main>
-        <!-- 물결 -->
         <section class="part1">
             <div class="frame">
-                <div class="wave wave-back">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                </div>
+                <div class="wave wave-back"></div>
             </div>
+            <h3 class="about">LET ME INTRODUCE MYSELF</h3>
         </section>
-    </main>
+      </main>
     <!-- //main -->
 
     <footer></footer>
     <!-- //footer -->
+
+    <script type="text/javascript">
+        // 글자 애니메이션
+        const marquee = document.querySelector(".marquee");
+
+        // 물결 애니메이션
+        const waveBack = document.querySelector('.wave-back');
+        const numCircles = 24;
+
+        for (let i = 0; i < numCircles; i++) {
+        const circle = document.createElement('div');
+        circle.classList.add('circle');
+        waveBack.appendChild(circle);
+        }
+    </script>
 </body>
 </html>
