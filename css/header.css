@@ -6,7 +6,7 @@ h2 {
     color: #ffd310;
     width: 100%;
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
 }
 .nav {
     width: 95%;
@@ -20,6 +20,7 @@ h2 {
     padding: 0 10%;
     position: fixed;
     z-index: 1;
+    margin-left: 35px;
 }
 
 .logo {
@@ -79,7 +80,7 @@ h2 {
     color: #ffff;
     font-weight: 700;
     display: inline-block;
-    animation: marquee 10s linear infinite;
+    animation: marquee 15s linear infinite;
     white-space: nowrap;
 }
 

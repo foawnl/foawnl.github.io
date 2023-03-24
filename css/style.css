@@ -14,9 +14,12 @@ header {
     /* position: relative; */
 }
 main {}
-footer {}
+footer {
+    width: 100%;
+    overflow: hidden;
+}
 
 .container {
-    width: 1250px;
+    width: 1450px;
     margin: 0 auto;
 }
