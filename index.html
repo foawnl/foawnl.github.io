@@ -8,8 +8,12 @@
     
     <!-- style -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
+
+    <script type="text/javascript" src="./js/script.js"></script>
 
 </head>
 <body>
@@ -17,19 +21,16 @@
 
     </div>
     <header>
-        <div class="container">
-            <div class="nav">
-                <div class="logo">
-                    <span></span>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">WORKS</a></li>
-                        <li><a href="#">SKILLS</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </div>
+        <div class="nav">
+            <div class="logo">
+                <span></span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SKILLS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
             </div>
         </div>
         <h2>THANK YOU FOR VISITING</h2>
@@ -44,7 +45,56 @@
             <div class="frame">
                 <div class="wave wave-back"></div>
             </div>
-            <h3 class="about">LET ME INTRODUCE MYSELF</h3>
+            <h3 class="about">MY WOKRS</h3>
+            <div id="slider" class="slider container">
+                <ul class="list">
+                    <li class="item">
+                        <img src="./img/work.jpg" alt="프로젝트 이미지">
+                        <h4>VERSACE</h4>
+                        <article>
+                            <a class="link" href="#">
+                                자세히보기
+                            </a>
+                        </article>
+                    </li>
+                    <li class="item">
+                        <img src="./img/work.jpg" alt="프로젝트 이미지">
+                        <h4>VERSACE</h4>
+                        <article>
+                            <a class="link" href="#">
+                                자세히보기
+                            </a>
+                        </article>
+                    </li>
+                    <li class="item">
+                        <img src="./img/work.jpg" alt="프로젝트 이미지">
+                        <h4>VERSACE</h4>
+                        <article>
+                            <a class="link" href="#">
+                                자세히보기
+                            </a>
+                        </article>
+                    </li>
+                    <li class="item">
+                        <img src="./img/work.jpg" alt="프로젝트 이미지">
+                        <h4>VERSACE</h4>
+                        <article>
+                            <a class="link" href="#">
+                                자세히보기
+                            </a>
+                        </article>
+                    </li>
+                    <li class="item">
+                        <img src="./img/work.jpg" alt="프로젝트 이미지">
+                        <h4>VERSACE</h4>
+                        <article>
+                            <a class="link" href="#">
+                                자세히보기
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="part2"></section>
         <section class="part3"></section>
@@ -55,18 +105,46 @@
     <!-- //footer -->
 
     <script type="text/javascript">
-        // 글자 애니메이션
-        const marquee = document.querySelector(".marquee");
-
         // 물결 애니메이션
         const waveBack = document.querySelector('.wave-back');
         const numCircles = 24;
 
         for (let i = 0; i < numCircles; i++) {
-        const circle = document.createElement('div');
-        circle.classList.add('circle');
-        waveBack.appendChild(circle);
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            waveBack.appendChild(circle);
         }
+
+        // 슬라이드
+        const sliderContainer = document.querySelector(".slider");
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        sliderContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            sliderContainer.classList.add('active');
+            startX = e.pageX - sliderContainer.offsetLeft;
+            scrollLeft = sliderContainer.scrollLeft;
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+            sliderContainer.classList.remove('active');
+        });
+
+        sliderContainer.addEventListener('mouseup', () => {
+            isDown = false;
+            sliderContainer.classList.remove('active');
+        });
+
+        sliderContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - sliderContainer.offsetLeft;
+            const walk = (x - startX) * 3;
+            sliderContainer.scrollLeft = scrollLeft - walk;
+        });
     </script>
 </body>
 </html>
