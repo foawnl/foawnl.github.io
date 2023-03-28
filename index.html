@@ -22,18 +22,16 @@
 
     </div>
     <header>
-        <div class="container">
-            <div class="nav">
-                <div class="logo">
-                    <span></span>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">WORKS</a></li>
-                        <li><a href="#">SKILLS</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </div>
+        <div class="nav">
+            <div class="logo">
+                <span></span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SKILLS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
             </div>
         </div>
         <h2>THANK YOU FOR VISITING</h2>
@@ -55,26 +53,32 @@
                         <li class="item">
                             <img src="./img/luma_img.jpg" alt="프로젝트 이미지">
                             <h4>LUMA</h4>
-                            <article>
-                                <a class="link" href="https://drive.google.com/file/d/1ap92Qvu4oghCH5PsEfgpfG0mv9D16wY5/view?usp=share_link">
-                                    자세히보기
-                                </a>
-                            </article>
+                            <button type="button" id="modal_btn">자세히보기</button>
+                            <div class="black_bg"></div>
+                            <div class="modal_wrap">
+                                <div class="modal_close"><a href="#">close</a></div>
+                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                                    <img src="./img/luma.jpg" alt="">
+                                </div>
+                            </div>
                         </li>
                         <li class="item">
                             <img src="./img/VERSACE_img.jpg" alt="프로젝트 이미지">
                             <h4>VERSACE</h4>
-                            <article>
-                                <a class="link" href="https://drive.google.com/file/d/1uoUiabNy_3k-2XETUQ7PF7AP6XsnP-IK/view?usp=share_link">
-                                    자세히보기
-                                </a>
-                            </article>
+                            <button type="button" id="modal_btn">자세히보기</button>
+                            <div class="black_bg"></div>
+                            <div class="modal_wrap">
+                                <div class="modal_close"><a href="#">close</a></div>
+                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                                    <img src="./img/VERSACE_web.jpg" alt="">
+                                </div>
+                            </div>
                         </li>
                         <li class="item">
                             <img src="./img/NIVEA_LOGO.jpg" alt="프로젝트 이미지">
                             <h4>NIVEA</h4>
                             <article>
-                                <a class="link" href="#">
+                                <a class="link" href="./html/nivea.html">
                                     자세히보기
                                 </a>
                             </article>
@@ -83,7 +87,7 @@
                             <img src="./img/INNISFREE_LOGO.jpg" alt="프로젝트 이미지">
                             <h4>INNISFREE</h4>
                             <article>
-                                <a class="link" href="#">
+                                <a class="link" href="./html/innisfree.html">
                                     자세히보기
                                 </a>
                             </article>
@@ -112,7 +116,7 @@
 
     <footer>
         <div class="effect_part1">
-            <p class="marquee_part1">THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . </p>
+            <p class="marquee_part1">THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . </p>
         </div>
     </footer>
     <!-- //footer -->
@@ -158,6 +162,21 @@
             const walk = (x - startX) * 3;
             sliderContainer.scrollLeft = scrollLeft - walk;
         });
+
+        //자세히보기
+        window.onload = function() {
+
+            function onClick() {
+                document.querySelector(".modal_wrap").style.display = 'block';
+                document.querySelector(".black_bg").style.display = 'block';
+            }
+            function offClick() {
+                document.querySelector(".modal_wrap").style.display = 'none';
+                document.querySelector(".black_bg").style.display = 'none';
+            }
+            document.getElementById('modal_btn').addEventListener('click', onClick);
+            document.querySelector(".modal_close").addEventListener('click', offClick);
+        };
     </script>
 </body>
 </html>

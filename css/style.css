@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+button {
+    border:none;
+    background: none;
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 18px;
+    font-weight: 700;
+    width: 355px;padding-top: 15px;
+}
 header {
     font-family: 'NanumSquareNeo-Variable';
     background: url("/img/main.png");
@@ -11,7 +19,8 @@ header {
     width: 100%;
     height: 100vh; 
     padding-top: 50px;
-    /* position: relative; */
+    justify-content: center;
+    align-items: center;
 }
 main {}
 footer {

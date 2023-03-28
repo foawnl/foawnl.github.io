@@ -8,7 +8,7 @@
     font-size: 50px;
     color: #243C30;
     display: inline-block;
-    animation: marquee_part1 15s linear infinite;
+    animation: marquee_part1 20s linear infinite;
     white-space: nowrap;
 }
 
