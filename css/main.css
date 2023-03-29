@@ -111,48 +111,63 @@
     font-weight: 700;
 }
 /* modal */
+#modal {
+    display: none;
+    width: 70vw;
+    height: 50vh;
+    max-width: 900px;
+    min-width: 350px;
+    position: fixed;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eee;
+    z-index: 300;
+}
+#modal.show {
+    display: block;
+}
 .modal_btn:hover {
     cursor: pointer;
     color: #FFD310;
 }
-.modal_wrap {
+.modal_wrap li {
     display: none;
-    width: 1000px;
-    height: 1000px;
+}
+.modal_wrap li.show {
+    display: block;
     position: absolute;
-    top:33%;
-    left: 33%;
-    margin: -250px 0 0 -250px;
-    background: #eee;
-    z-index: 2;
+    z-index: 501;
 }
 .black_bg {
     display: none;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    top: 0;
-    left: 0;
-    z-index: 1;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+}
+.black_bg.show {
+    display: block;
 }
 .modal_close {
     width: 20px;
-    /* height: 26px; */
     position: absolute;
-    top: 2%;
-    right: 2%;
+    top: 30px;
+    right: 30px;
 }
-.modal_close > a {
+.modal_close > span {
     display: block;
     width: 100%;
     height: 100%;
     background: url(https://img.icons8.com/metro/26/000000/close-window.png);
     background-size: cover;
     text-indent: -9999px;
+    cursor: pointer;
 }
-.modal_close > a:hover {
+.modal_close > span:hover {
     background-color: #fff;
     scale: 1.2;
 }

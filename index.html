@@ -38,7 +38,7 @@
         </div>
     </header>
     <!-- //header -->
-
+    
     <main>
         <section class="part1">
             <div class="frame">
@@ -51,76 +51,32 @@
                         <li class="item">
                             <img src="./img/luma_img.jpg" alt="프로젝트 이미지">
                             <h4>LUMA</h4>
-                            <button type="button" class="modal_btn">자세히보기</button>
-                            <div class="black_bg"></div>
-                            <div class="modal_wrap">
-                                <div class="modal_close"><a href="#">close</a></div>
-                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
-                                    <img src="./img/luma.jpg" alt="">
-                                </div>
-                            </div>
+                            <button type="button" class="modal_btn" key="luma">자세히보기</button>
                         </li>
                         <li class="item">
                             <img src="./img/VERSACE_img.jpg" alt="프로젝트 이미지">
                             <h4>VERSACE</h4>
-                            <button type="button" class="modal_btn">자세히보기</button>
-                            <div class="black_bg"></div>
-                            <div class="modal_wrap">
-                                <div class="modal_close"><a href="#">close</a></div>
-                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
-                                    <img src="./img/VERSACE_web.jpg" alt="">
-                                </div>
-                            </div>
+                            <button type="button" class="modal_btn" key="versace">자세히보기</button>
                         </li>
                         <li class="item">
                             <img src="./img/NIVEA_LOGO.jpg" alt="프로젝트 이미지">
                             <h4>NIVEA</h4>
-                            <button type="button" class="modal_btn">자세히보기</button>
-                            <div class="black_bg"></div>
-                            <div class="modal_wrap">
-                                <div class="modal_close"><a href="#">close</a></div>
-                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
-                                    <img src="./img/NIVEA.jpg" alt="">
-                                </div>
-                            </div>
+                            <button type="button" class="modal_btn" key="nivea">자세히보기</button>
                         </li>
                         <li class="item">
                             <img src="./img/INNISFREE_LOGO.jpg" alt="프로젝트 이미지">
                             <h4>INNISFREE</h4>
-                            <button type="button" class="modal_btn">자세히보기</button>
-                            <div class="black_bg"></div>
-                            <div class="modal_wrap">
-                                <div class="modal_close"><a href="#">close</a></div>
-                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
-                                    <img src="./img/이니스프리_인스타.jpg" alt="">
-                                </div>
-                            </div>
+                            <button type="button" class="modal_btn" key="innisfree">자세히보기</button>
                         </li>
                         <li class="item">
                             <img src="./img/NUBURGER_LOGO.jpg" alt="프로젝트 이미지">
                             <h4>NUBURGER</h4>
-                            <button type="button" class="modal_btn">자세히보기</button>
-                            <div class="black_bg"></div>
-                            <div class="modal_wrap">
-                                <div class="modal_close"><a href="#">close</a></div>
-                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
-                                    <img src="./img/NUBURGER.jpg" alt="">
-                                </div>
-                            </div>
+                            <button type="button" class="modal_btn" key="nuburger">자세히보기</button>
                         </li>
                         <li class="item">
                             <img src="./img/bbang_logo.jpg" alt="프로젝트 이미지">
                             <h4>bbang</h4>
-                            <button type="button" class="modal_btn">자세히보기</button>
-                            <div class="black_bg"></div>
-                            <div class="modal_wrap">
-                                <div class="modal_close"><a href="#">close</a></div>
-                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
-                                    <img src="./img/시나몬롤.jpg" alt="">
-                                    <img src="./img/딸기파이.jpg" alt="">
-                                    <img src="./img/말차케이크.jpg" alt="">
-                                </div>
-                            </div>
+                            <button type="button" class="modal_btn" key="bbang">자세히보기</button>
                         </li>
                     </ul>
                 </div>
@@ -146,7 +102,49 @@
         </div>
     </footer>
     <!-- //footer -->
-
+    <div class="black_bg"></div>
+    <div id="modal" class="">
+        <ul class="modal_wrap">
+            <li class="luma">
+                <div class="modal_close"><span>close</span></div>
+                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                    <img src="./img/luma.jpg" alt="">
+                </div>
+            </li>
+            <li class="versace">
+                <div class="modal_close"><span>close</span></div>
+                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                    <img src="./img/VERSACE_web.jpg" alt="">
+                </div>
+            </li>
+            <li class="nivea">
+                <div class="modal_close"><span>close</span></div>
+                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                    <img src="./img/NIVEA.jpg" alt="">
+                </div>
+            </li>
+            <li class="innisfree">
+                <div class="modal_close"><span>close</span></div>
+                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                    <img src="./img/이니스프리_인스타.jpg" alt="">
+                </div>
+            </li>
+            <li class="nuburger">
+                <div class="modal_close"><span>close</span></div>
+                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                    <img src="./img/NUBURGER.jpg" alt="">
+                </div>
+            </li>
+            <li class="bbang">
+                <div class="modal_close"><span>close</span></div>
+                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                    <img src="./img/시나몬롤.jpg" alt="">
+                    <img src="./img/딸기파이.jpg" alt="">
+                    <img src="./img/말차케이크.jpg" alt="">
+                </div>
+            </li>
+        </ul>
+    </div>
     <script type="text/javascript">
         // 물결 애니메이션
         const waveBack = document.querySelector('.wave-back');
@@ -189,44 +187,39 @@
             sliderContainer.scrollLeft = scrollLeft - walk;
         });
 
-        //자세히보기
-        // window.onload = function() {
+        
 
-        //     function onClick() {
-        //         document.querySelector(".modal_wrap").style.display = 'block';
-        //         document.querySelector(".black_bg").style.display = 'block';
-        //     }
-        //     function offClick() {
-        //         document.querySelector(".modal_wrap").style.display = 'none';
-        //         document.querySelector(".black_bg").style.display = 'none';
-        //     }
-        //     document.getElementById('modal_btn').addEventListener('click', onClick);
-        //     document.querySelector(".modal_close").addEventListener('click', offClick);
-        // };
+        // 자세히보기
         window.onload = function() {
 
-        function onClick() {
-            var modalWrap = this.parentNode.querySelector(".modal_wrap");
-            var blackBg = this.parentNode.querySelector(".black_bg");
-            modalWrap.style.display = 'block';
-            blackBg.style.display = 'block';
-        }
-        function offClick() {
-            var modalWrap = this.parentNode.parentNode.querySelector(".modal_wrap");
-            var blackBg = this.parentNode.parentNode.querySelector(".black_bg");
-            modalWrap.style.display = 'none';
-            blackBg.style.display = 'none';
-        }
+            var modal = document.getElementById('modal');
+            var bg = document.querySelector('.black_bg');
 
-        var modalBtns = document.querySelectorAll('.modal_btn');
-            for (var i = 0; i < modalBtns.length; i++) {
-                modalBtns[i].addEventListener('click', onClick);
+            function onClick(key) {
+                var selectedLi = modal.querySelector(`.${key}`);
+                
+                modal.classList.add("show");
+                bg.classList.add("show");
+                selectedLi.classList.add("show");
+            }
+            function offClick() {
+                var selectedLi = this.parentNode;
+                
+                modal.classList.remove("show");
+                bg.classList.remove("show");
+                selectedLi.classList.remove("show");
             }
 
-        var modalCloses = document.querySelectorAll('.modal_close');
-            for (var j = 0; j < modalCloses.length; j++) {
-                modalCloses[j].addEventListener('click', offClick);
-            }
+            var modalBtns = document.querySelectorAll('.modal_btn');
+            modalBtns.forEach((modalBtn) => {
+                var key = modalBtn.getAttribute('key');
+                modalBtn.addEventListener('click', ()=>{onClick(key)});
+            });
+
+            var modalCloses = document.querySelectorAll('.modal_close');
+            modalCloses.forEach((modalClose) => {
+                modalClose.addEventListener('click', offClick);
+            });
         };
     </script>
 </body>
