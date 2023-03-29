@@ -111,7 +111,7 @@
     font-weight: 700;
 }
 /* modal */
-#modal_btn:hover {
+.modal_btn:hover {
     cursor: pointer;
     color: #FFD310;
 }

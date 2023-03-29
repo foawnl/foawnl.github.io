@@ -53,7 +53,7 @@
                         <li class="item">
                             <img src="./img/luma_img.jpg" alt="프로젝트 이미지">
                             <h4>LUMA</h4>
-                            <button type="button" id="modal_btn">자세히보기</button>
+                            <button type="button" class="modal_btn">자세히보기</button>
                             <div class="black_bg"></div>
                             <div class="modal_wrap">
                                 <div class="modal_close"><a href="#">close</a></div>
@@ -65,7 +65,7 @@
                         <li class="item">
                             <img src="./img/VERSACE_img.jpg" alt="프로젝트 이미지">
                             <h4>VERSACE</h4>
-                            <button type="button" id="modal_btn">자세히보기</button>
+                            <button type="button" class="modal_btn">자세히보기</button>
                             <div class="black_bg"></div>
                             <div class="modal_wrap">
                                 <div class="modal_close"><a href="#">close</a></div>
@@ -77,20 +77,26 @@
                         <li class="item">
                             <img src="./img/NIVEA_LOGO.jpg" alt="프로젝트 이미지">
                             <h4>NIVEA</h4>
-                            <article>
-                                <a class="link" href="./html/nivea.html">
-                                    자세히보기
-                                </a>
-                            </article>
+                            <button type="button" class="modal_btn">자세히보기</button>
+                            <div class="black_bg"></div>
+                            <div class="modal_wrap">
+                                <div class="modal_close"><a href="#">close</a></div>
+                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                                    <img src="./img/NIVEA.jpg" alt="">
+                                </div>
+                            </div>
                         </li>
                         <li class="item">
                             <img src="./img/INNISFREE_LOGO.jpg" alt="프로젝트 이미지">
                             <h4>INNISFREE</h4>
-                            <article>
-                                <a class="link" href="./html/innisfree.html">
-                                    자세히보기
-                                </a>
-                            </article>
+                            <button type="button" class="modal_btn">자세히보기</button>
+                            <div class="black_bg"></div>
+                            <div class="modal_wrap">
+                                <div class="modal_close"><a href="#">close</a></div>
+                                <div class="modal_img" style="overflow-y: scroll; width: 100%; height: 100%;">
+                                    <img src="./img/이니스프리_인스타.jpg" alt="">
+                                </div>
+                            </div>
                         </li>
                         <li class="item">
                             <img src="./img/work.jpg" alt="프로젝트 이미지">
@@ -164,18 +170,43 @@
         });
 
         //자세히보기
+        // window.onload = function() {
+
+        //     function onClick() {
+        //         document.querySelector(".modal_wrap").style.display = 'block';
+        //         document.querySelector(".black_bg").style.display = 'block';
+        //     }
+        //     function offClick() {
+        //         document.querySelector(".modal_wrap").style.display = 'none';
+        //         document.querySelector(".black_bg").style.display = 'none';
+        //     }
+        //     document.getElementById('modal_btn').addEventListener('click', onClick);
+        //     document.querySelector(".modal_close").addEventListener('click', offClick);
+        // };
         window.onload = function() {
 
-            function onClick() {
-                document.querySelector(".modal_wrap").style.display = 'block';
-                document.querySelector(".black_bg").style.display = 'block';
+        function onClick() {
+            var modalWrap = this.parentNode.querySelector(".modal_wrap");
+            var blackBg = this.parentNode.querySelector(".black_bg");
+            modalWrap.style.display = 'block';
+            blackBg.style.display = 'block';
+        }
+        function offClick() {
+            var modalWrap = this.parentNode.parentNode.querySelector(".modal_wrap");
+            var blackBg = this.parentNode.parentNode.querySelector(".black_bg");
+            modalWrap.style.display = 'none';
+            blackBg.style.display = 'none';
+        }
+
+        var modalBtns = document.querySelectorAll('.modal_btn');
+            for (var i = 0; i < modalBtns.length; i++) {
+                modalBtns[i].addEventListener('click', onClick);
             }
-            function offClick() {
-                document.querySelector(".modal_wrap").style.display = 'none';
-                document.querySelector(".black_bg").style.display = 'none';
+
+        var modalCloses = document.querySelectorAll('.modal_close');
+            for (var j = 0; j < modalCloses.length; j++) {
+                modalCloses[j].addEventListener('click', offClick);
             }
-            document.getElementById('modal_btn').addEventListener('click', onClick);
-            document.querySelector(".modal_close").addEventListener('click', offClick);
         };
     </script>
 </body>
