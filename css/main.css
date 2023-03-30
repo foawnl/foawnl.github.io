@@ -123,6 +123,7 @@
     transform: translateX(-50%);
     background: #eee;
     z-index: 300;
+    overflow: auto;
 }
 #modal.show {
     display: block;
@@ -133,10 +134,11 @@
 }
 .modal_wrap li {
     display: none;
+    position: relative;
 }
 .modal_wrap li.show {
     display: block;
-    position: absolute;
+    /* position: absolute; */
     z-index: 501;
 }
 .black_bg {
@@ -171,8 +173,16 @@
     background-color: #fff;
     scale: 1.2;
 }
+.modal_img {
+    /* overflow-y: scroll;
+    width: 100%; */
+    max-height: calc(100% - 30px);
+    /* overflow-y: auto; */
+}
 .modal_img img {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
