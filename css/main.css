@@ -77,6 +77,7 @@
     width: 100%;
     /* transform: translate(0,0); */
     scroll-snap-type: x mandatory;
+    padding-bottom: 15px;
 }
 .item {
     /* width: 357px;
@@ -87,7 +88,8 @@
     flex-shrink: 0;
     scroll-snap-align: center;
     object-fit: cover;
-    box-shadow: 10px 10px 5px #243C30;
+    box-shadow: 10px 10px 5px #98a087;
+    overflow: hidden;
 }
 .item img {
     display: block;
