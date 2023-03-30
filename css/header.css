@@ -11,14 +11,15 @@ h2 {
 .nav {
     width: 95%;
     height: 60px;
-    margin: 0 auto;
     background-color: #eaf5d1;
     border-radius: 50px;
     border: 2px solid #243c30;
     padding: 0 10%;
-    /* position: fixed; */
+    position: fixed;
+    transform: translateX(-50%);
+    left: 50%;
     z-index: 1;
-    /* margin-left: 35px; */
+
 }
 
 .logo {
