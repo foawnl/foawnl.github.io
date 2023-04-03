@@ -1,22 +1,23 @@
 .effect_part1 {
-    background-color: #ffff;
+    background-color: #243C30;
     width: 100%;
     padding: 10px;
 }
-.effect_part1 .marquee_part1 {
+.effect_part1 .marquee {
     font-family: 'HSBombaram';
     font-size: 50px;
-    color: #243C30;
+    color: #ffff;
     display: inline-block;
-    animation: marquee_part1 20s linear infinite;
+    /* animation: marquee_part1 20s linear infinite; */
     white-space: nowrap;
+    margin-right: 10px;
 }
 
-@keyframes marquee_part1 {
+/* @keyframes marquee_part1 {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
   }
-}
+} */

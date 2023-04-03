@@ -1,3 +1,73 @@
+/* common */
+.section_title {
+    width: 100%; 
+    padding-top: 120px;
+    padding-bottom: 22px; 
+    display: flex; 
+    justify-content: center;
+    color: #243C30;
+    font-family: 'HSBombaram';
+}
+.section_title {
+    font-size: calc(20px + 1vw);
+}
+/* part0 */
+.part0 {
+    font-family: 'NanumSquareNeo-Variable';
+    background: url("/img/main.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+}
+.main_text {
+    font-family: 'HSBombaram';
+    text-align: center;
+    font-size: 6vw;
+    color: #ffd310;
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+}
+.effect_header {
+    overflow: hidden;
+    background-color: #243C30;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0px;
+}
+/* .marquee를 .marquee_wrap으로 수정 (기존 marquee를 marquee_wrap으로 감쌌기때문 */
+/* animation disabled */
+.marquee_wrap {
+    display: flex;
+}
+.effect_header .marquee_wrap {
+    height: 100%;
+    align-items: center;
+}
+.effect_header .marquee {
+    /* font-size: 1.5vw; */
+    font-size: 18px;
+    color: #ffff;
+    font-weight: 700;
+    display: inline-block;
+    /* animation: marquee 15s linear infinite; */
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+/* @keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} */
 /* part1 */
 .part1 {
     background-color: #eaf5d1;
@@ -12,11 +82,12 @@
 .frame {
     /* background: #ffff; */
     width: 100%;
-    height: 100px;
+    /* height: 100px; */
     /* position: relative; */
     /* overflow: hidden; */
 }
-.wave {
+/* lagacy */
+/* .wave {
     position: absolute;
     top: 0;
     display: flex;
@@ -45,23 +116,28 @@
 }
 @keyframes move {
     0% {transform: translate(-500px);}
-    /* 50% {transform: translate(50px);} */
     100% {transform: translate(2px);}
+} */
+/* new wave style */
+.wave {
+    display: flex;
+    background-color: #fff;
+    height: 34px;
 }
-.works {
-    font-family: 'HSBombaram';
-    font-size: 1.8vw;
-    color: #243C30;
-    position: absolute;
-    right: 45%;
-    top: 8%;
+.circle {
+    display: inline-block;
+    background-color: #fff;
+    width: 100px;
+    height: 70px;
+    border-radius: 50%;
 }
+/* end */
 
 /* list */
 #slider {
     /* overflow: hidden; */
     /* position: absolute; */
-    margin-top: 150px;
+    margin-top: 110px;
     margin-bottom: 100px;
 }   
 .slider {
@@ -124,10 +200,10 @@
     left: 50%;
     transform: translateX(-50%);
     background: #eee;
-    z-index: 300;
+    z-index: 501;
     overflow: auto;
 }
-#modal.show {                     
+#modal.show {
     display: block;
 }
 .modal_btn:hover {
@@ -141,17 +217,19 @@
 .modal_wrap li.show {
     display: block;
     /* position: absolute; */
-    z-index: 501;
+    z-index: 502;
 }
 .black_bg {
     display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     top: 0px;
     left: 0px;
-    z-index: 200;
+    z-index: 500;
 }
 .black_bg.show {
     display: block;
@@ -200,33 +278,123 @@
     width: 100%;
     position: relative;
 }
-.skills {
-    font-family: 'HSBombaram';
-    font-size: 1.8vw;
-    color: #243C30;
-    /* position: absolute;
-    top: 0%; */
-    text-align: center;
-    padding: 40px 0px;
+.skills_wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.skills_wrap .skills_number {
+    position: absolute;
+    width: 70vw;
+    min-width: 560px;
+    max-width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.skills_wrap .skills_number_mobile {
+    display: none;
+}
+.skills_wrap .lottie {
+    /* width: 100%; */
+    min-width: 800px;
+}
+.part2 .bubble_frame {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    bottom: -110px;
 }
 .part2 .bubble {
-    width: 100%;
-    position: absolute;
-    bottom: -83px;
+    /* TODO: 버블이 중간으로 왔으면 좋겠는데 중간으로 오지는 않는다. */
+    /* 100%로 했을때 */
+    /* width: 100%; */
+    /* bottom: -79px; */
+    /* 1800px로 했을때 */
+    width: 1800px;
+    /* bottom: -110px; */
+    /* disabled due to generate new parent div */
 }
 
 /* part3 */
 .part3 {
     background-color: #ffff;
     width: 100%;
-    height: 100vh;
 }
-.contact {
-    font-family: 'HSBombaram';
-    font-size: 1.8vw;
-    color: #243C30;
-    /* position: absolute;
-    top: 0%; */
+.contact_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: linear-gradient(to bottom, #ffff 50%, #243C30 50%);
+}
+.contact_circle {
+    font-family: NanumSquareNeo-Variable;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 362px;
+    height: 362px;
+    border-radius: 50%;
+    border: 1px solid #243C30;
+    background-color: #ffff;
+}
+.contact_circle_text {
+    font-weight: 900;
+    font-variation-settings: "wght" 900;
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.email_btn {
+    font-weight: 700;
+    font-variation-settings: "wght" 700;
+    padding: 14px 60px;
+    border-radius: 50px;
+    border: 1px solid #243C30;
+    background-color: #ffff;
     text-align: center;
-    margin-top: 80px;
+    cursor: pointer;
+}
+.email_btn:hover {
+    background-color: #243C30;
+    color: #ffff;
+    transition: all 0.1s;
+}
+
+@media only screen and (max-width: 768px) {
+    /* part0 */
+    .main_text {
+        font-size: calc(50px + 1vw * 0.5);
+        text-align: left;
+        padding: 0px 30px;
+        bottom: 80px;
+    }
+    /* part2 */
+    .skills_wrap .skills_number {
+        display: none;
+    }
+    .skills_wrap .skills_number_mobile {
+        display: block;
+        position: absolute;
+        width: 90vw;
+        max-width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+    .skills_wrap .lottie {
+        min-width: 400px;
+    }
+    .part2 .bubble_frame {
+        bottom: -58px;
+    }
+    .part2 .bubble {
+        width: 1000px;
+        /* bottom: -58px; */
+    }
 }

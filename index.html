@@ -17,35 +17,78 @@
 </head>
 <body>
     <div class="top">
-
+        <div class="top_inner">
+            <span>여기는 새로 만들어진 탑바에요오오</span>
+        </div>
+        <div class="bottom"></div>
     </div>
+    <style>
+        .top {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            /* change with .nav.fixed */
+            height: 40px;
+        }
+        .top_inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(36, 60, 48);
+            color: #ffd310;
+        }
+        .bottom {
+            display: none;
+            position: absolute;
+            background-size: contain;
+            /* change with .nav.fixed */
+            height: 11px;
+            width: 100vw;
+            background-image: url("//cdn.shopify.com/s/files/1/0476/2566/6714/t/29/assets/72.png?v=80287911780583589841646311911");
+            background-position: top left;
+        }
+    </style>
     <header>
         <div class="nav">
             <div class="logo">
-                <span></span>
+                <span>로고</span>
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">WORKS</a></li>
-                    <li><a href="#">SKILLS</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><span>WORKS</span></li>
+                    <li><span>SKILLS</span></li>
+                    <li><span>CONTACT</span></li>
                 </ul>
             </div>
-        </div>
-        <h2>THANK YOU FOR VISITING</h2>
-        <div class="effect_header">
-            <p class="marquee">PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . </p>
         </div>
     </header>
     <!-- //header -->
     
     <main>
+        <section class="part0">
+            <h2 class="main_text">THANK YOU FOR VISITING</h2>
+            <div class="effect_header">
+                <!-- 구조 변경 marquee -> marquee_wrap -->
+                <div class="marquee_wrap marquee_wrap_effect_header">
+                    <p class="marquee">PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . </p>
+                    <p class="marquee">PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . PASSIONATE PERSON . </p>
+                </div>
+            </div>
+        </section>
         <section class="part1">
             <div class="frame">
-                <div class="wave wave-back"></div>
+                <!-- title에게 충분한 padding-top을 준다면 제목 위에 충분한 공간으로 공간분리가 되는 느낌을 줄 수 있을 것 같고, 지금 네브바를 고려해서 스크롤되게 되어있는데 네브바 높이를 빼지않아도 이쁘게 안착할 수 있을지도 모르겠다는 생각이 든다. -->
+                <div class="section_title" style="background-color: #ffff;">
+                    <h3>MY WOKRS</h3>
+                </div>
+                <div class="marquee_wrap marquee_wrap_wave">
+                    <div class="marquee wave"></div>
+                    <div class="marquee wave"></div>
+                </div>
             </div>
             <div class="container">
-                <h3 class="works">MY WOKRS</h3>
                 <div id="slider" class="slider">
                     <ul class="list">
                         <li class="item">
@@ -83,15 +126,31 @@
             </div>
         </section>
         <section class="part2">
-            <h3 class="skills">SKILLS</h3>
-            <img class="skills_number" src="./img/skills_number.svg" alt="">
-            <lottie-player src="./data.json" style="width:100%; heigth:auto" loop autoplay preserveAspectRatio="xMidYMid slice"></lottie-player>
-            <img class="bubble" src="./img/물방울.svg" alt="">
+            <div class="section_title">
+                <h3>SKILLS</h3>
+            </div>
+            <div class="skills_wrap">
+                <img class="skills_number" src="./img/skills_number.svg" alt="">
+                <img class="skills_number_mobile" src="./img/skills_number.svg" alt="">
+                <div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 8%; background: linear-gradient(#eaf5d1, #eaf5d100); z-index: 2;"></div>
+                    <lottie-player class="lottie" src="./data.json" loop autoplay preserveAspectRatio="xMidYMid slice"></lottie-player>
+                </div>
+                <div class="bubble_frame">
+                    <img class="bubble" src="./img/물방울.svg" alt="">
+                </div>
+            </div>
         </section>
         <section class="part3">
-            <h3 class="contact">CONTACT</h3>
-            <div class="container">
-                
+            <div class="section_title" style="margin-top: 40px;">
+                <h3>CONTACT</h3>
+            </div>
+            <div class="contact_wrap">
+                <div class="contact_circle">
+                    <span class="contact_circle_text">I look forward to <br>hearing from you</span>
+                    <span class="email_btn">E-MAIL</span>
+                </div>
+                <img class="f_logo" src="" alt="" />
             </div>
         </section>
       </main>
@@ -99,7 +158,10 @@
 
     <footer>
         <div class="effect_part1">
-            <p class="marquee_part1">THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . </p>
+            <div class="marquee_wrap marquee_wrap_footer">
+                <p class="marquee">THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . </p>
+                <p class="marquee">THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . THANK YOU . </p>
+            </div>
         </div>
     </footer>
     <!-- //footer -->
@@ -152,14 +214,16 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script type="text/javascript">
         // 물결 애니메이션
-        const waveBack = document.querySelector('.wave-back');
         const numCircles = 24;
+        // const waveBack = document.querySelector('.wave-back');
+        document.querySelectorAll('.wave').forEach((el) => {
+            for (let i = 0; i < numCircles; i++) {
+                const circle = document.createElement('div');
+                circle.classList.add('circle');
+                el.appendChild(circle);
+            }
+        })
 
-        for (let i = 0; i < numCircles; i++) {
-            const circle = document.createElement('div');
-            circle.classList.add('circle');
-            waveBack.appendChild(circle);
-        }
 
         // 슬라이드
         const sliderContainer = document.querySelector(".slider");
@@ -192,24 +256,62 @@
             sliderContainer.scrollLeft = scrollLeft - walk;
         });
 
+        let scroll_value = 0;
         
-
-        // 자세히보기
         window.onload = function() {
+            // handle nav position
+            var nav = document.querySelector('.nav');
+            var top = document.querySelector('.top')
+            // initialize for prev scroll value preserved refresh
+            if (window.scrollY >= top.scrollHeight) {
+                nav.classList.contains("fixed")
+                ? ""
+                : nav.classList.add("fixed");
+            }
+            window.addEventListener("scroll", ()=>{
+                scroll_value = window.scrollY;
+                if (scroll_value < top.scrollHeight) {
+                    nav.classList.contains("fixed")
+                    ? nav.classList.remove("fixed")
+                    : "";
+                } else {
+                    nav.classList.contains("fixed")
+                    ? ""
+                    : nav.classList.add("fixed");
+                }
+            })
 
+            // navbar btn scroll
+            nav.querySelector(".logo span").addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                })
+            })
+            nav.querySelectorAll(".menu span").forEach((el, i) => {
+                el.addEventListener("click", () => {
+                    // minus 88 due to navbar gap+height+gap
+                    var y_pos = document.querySelector(`.part${i+1}`).offsetTop;
+                    window.scrollTo({
+                        top: y_pos,
+                        behavior: "smooth"
+                    })
+                })
+            })
+            
+
+            // Modal
             var modal = document.getElementById('modal');
             var bg = document.querySelector('.black_bg');
 
             function onClick(key) {
                 var selectedLi = modal.querySelector(`.${key}`);
-                
                 modal.classList.add("show");
                 bg.classList.add("show");
                 selectedLi.classList.add("show");
             }
             function offClick() {
                 var selectedLi = this.parentNode;
-                
                 modal.classList.remove("show");
                 bg.classList.remove("show");
                 selectedLi.classList.remove("show");
@@ -225,6 +327,38 @@
             modalCloses.forEach((modalClose) => {
                 modalClose.addEventListener('click', offClick);
             });
+
+            // marquee
+            function marquee_animation(wrap_name, direction, speed=1) {
+                var marquee_wrap = document.querySelector(`.marquee_wrap_${wrap_name}`);
+                var marquee_width = marquee_wrap.querySelector(".marquee").offsetWidth;
+                var offsetValue = 0;
+                if (direction == '-') {
+                    setInterval(() => {
+                        if (offsetValue < marquee_width) {
+                            offsetValue += 0.5;
+                            marquee_wrap.style.transform = `translateX(${-offsetValue}px)`;
+                        } else {
+                            marquee_wrap.style.transform = "translateX(0px)";
+                            offsetValue = 0;
+                        };
+                    }, speed);
+                } else if (direction == "+") {
+                    offsetValue = -marquee_width;
+                    setInterval(() => {
+                        if (offsetValue <= 0) {
+                            offsetValue += 0.5;
+                            marquee_wrap.style.transform = `translateX(${offsetValue}px)`;
+                        } else {
+                            marquee_wrap.style.transform = "translateX(0px)";
+                            offsetValue = -marquee_width;
+                        };
+                    }, speed);
+                }
+            };
+            marquee_animation("effect_header", "-", 10);
+            marquee_animation("wave", "+", 10);
+            marquee_animation("footer", "-");
         };
     </script>
 </body>
