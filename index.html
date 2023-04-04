@@ -18,7 +18,7 @@
 <body>
     <div class="top">
         <div class="top_inner">
-            <span>여기는 새로 만들어진 탑바에요오오</span>
+            <!-- <span>여기는 새로 만들어진 탑바에요오오</span> -->
         </div>
         <div class="bottom"></div>
     </div>
@@ -28,7 +28,7 @@
             z-index: 1;
             width: 100%;
             /* change with .nav.fixed */
-            height: 40px;
+            height: 2px;
         }
         .top_inner {
             display: flex;
@@ -37,23 +37,22 @@
             width: 100%;
             height: 100%;
             background-color: rgb(36, 60, 48);
-            color: #ffd310;
         }
         .bottom {
-            display: none;
+            /* display: none; */
             position: absolute;
             background-size: contain;
             /* change with .nav.fixed */
-            height: 11px;
-            width: 100vw;
-            background-image: url("//cdn.shopify.com/s/files/1/0476/2566/6714/t/29/assets/72.png?v=80287911780583589841646311911");
+            height: 50px;
+            width: 100%;
+            background-image: url("./img/top_circle.svg");
             background-position: top left;
         }
     </style>
     <header>
         <div class="nav">
             <div class="logo">
-                <span>로고</span>
+                <img src="./img/logo.svg" alt="">
             </div>
             <div class="menu">
                 <ul>
@@ -150,7 +149,7 @@
                     <span class="contact_circle_text">I look forward to <br>hearing from you</span>
                     <span class="email_btn">E-MAIL</span>
                 </div>
-                <img class="f_logo" src="" alt="" />
+                <img class="f_logo" src="./img/logo.svg" alt="" />
             </div>
         </section>
       </main>
@@ -282,7 +281,7 @@
             })
 
             // navbar btn scroll
-            nav.querySelector(".logo span").addEventListener("click", () => {
+            nav.querySelector(".logo img").addEventListener("click", () => {
                 window.scrollTo({
                     top: 0,
                     behavior: "smooth"

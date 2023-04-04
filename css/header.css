@@ -28,10 +28,7 @@ header {
     justify-content: center;
 }
 
-.logo span {
-    width: 95px;
-    height: 35px;
-    background-color: #525252;
+.logo img {
     cursor: pointer;
 }
 

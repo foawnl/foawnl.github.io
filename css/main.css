@@ -306,6 +306,7 @@
     width: 100%;
     overflow: hidden;
     bottom: -110px;
+    z-index: 1;
 }
 .part2 .bubble {
     /* TODO: 버블이 중간으로 왔으면 좋겠는데 중간으로 오지는 않는다. */
@@ -322,6 +323,7 @@
 .part3 {
     background-color: #ffff;
     width: 100%;
+    position: relative;
 }
 .contact_wrap {
     display: flex;
@@ -348,6 +350,7 @@
     line-height: 40px;
     margin-top: 100px;
     margin-bottom: 50px;
+    color: #243C30;
 }
 .email_btn {
     font-weight: 700;
@@ -358,11 +361,18 @@
     background-color: #ffff;
     text-align: center;
     cursor: pointer;
+    color: #243C30;
 }
 .email_btn:hover {
     background-color: #243C30;
     color: #ffff;
     transition: all 0.1s;
+}
+.f_logo {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
 }
 
 @media only screen and (max-width: 768px) {
